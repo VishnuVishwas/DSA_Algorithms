@@ -58,8 +58,3 @@ week 4 : (Sorting and searching)
 		2. Binary search
 		3. Find First and Last Position of Element in Sorted Array
 		4. Find Peak Element
-
-week 5 : 
-	day1 :
-	 	1. selection sort 
-		2. bubble sort
