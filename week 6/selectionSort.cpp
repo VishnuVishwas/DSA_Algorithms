@@ -5,7 +5,7 @@ using namespace std;
 
 void selectionSort(vector<int> names) {
 
-int n = names.size() - 1;
+int n = names.size() ;
 
     for (int i = 0; i < n-1; i++) {
         int minIndex = i;
@@ -24,7 +24,7 @@ int n = names.size() - 1;
 }
 
 int main() {
-    vector<int> names{5, 4, 2, 1, 7, 6};
+    vector<int> names{5, 4, 3, 2, 1};
 
     selectionSort (names);
 }
