@@ -1,3 +1,5 @@
+// Given a string s, return true if the s can be palindrome after deleting at most one character from it.
+
 #include <iostream>
 #include <string.h>
 using namespace std;
