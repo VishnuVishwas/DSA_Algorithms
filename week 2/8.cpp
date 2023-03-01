@@ -1,33 +1,33 @@
 #include <iostream>
 using namespace std;
 
-int primeNumber (int n) {
+bool primeNumber (int n) {
     if (n < 2) {
         return -1;
     }
 
     else {
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i < n; i++) {
             if (n%i == 0) {
-                return -1;
+                return false;
             }
         }
-        return 0;
+        return true;
     }
+
 }
   
 int main() {
     int n;
-
     cout << "Enter the number : ";
     cin >> n;
 
-    int number = primeNumber(n);
+    bool isPrime = primeNumber(n);
 
-    if (n == -1 ){
-        cout << n << " is Not prime";
+    if (isPrime){
+        cout << n << " is prime";
     }
     else {
-        cout << n << " is prime";
+        cout << n << " is not a prime";
     }
 }
