@@ -24,10 +24,9 @@ int main() {
 
     bool isPrime = primeNumber(n);
 
-    if (isPrime){
-        cout << n << " is prime";
-    }
-    else {
-        cout << n << " is not a prime";
+    for (int i = 2; i < n; i++) {
+        if (isPrime) {
+            cout << i << " ";
+        }
     }
 }
