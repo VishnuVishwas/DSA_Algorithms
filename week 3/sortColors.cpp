@@ -16,7 +16,6 @@ int sortColors(vector<int> names) {
     int h = names.size() - 1;
 
     while (m <= h) {
-        // 
         if (names[m] == 0) {
             swap(names[m], names[l]);
             l++;
