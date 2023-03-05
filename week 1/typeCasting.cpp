@@ -16,4 +16,6 @@ int main() {
     cout << ch2 << endl;  // a unexpected value is printed
 
     cout << true + false;
+
+    cout << 2.7 + 100;
 }
