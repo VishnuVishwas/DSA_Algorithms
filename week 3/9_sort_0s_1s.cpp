@@ -33,7 +33,7 @@ void sortNum2 (int arr[], int size) {
     int e = size -1;
     int i = 0;
 
-    cout << "\napproch 2" << endl;
+    cout << "\napproch 2" << endl;  // 3 pointer approach
     while (s <= e) {
         if (arr[i] == 0 ) {
             swap(arr[i], arr[s]);
