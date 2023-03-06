@@ -1,3 +1,6 @@
+//Array elements are : 1 2 3 4 5 Extreme elements : 
+// output : 15243
+
 #include <iostream>
 using namespace std;
 
