@@ -2,37 +2,7 @@ Refer this until week 4
 
 *indicates unusal questions
 
-week 1 : 
-	1. hello world
 
-	2. Rectangle pattern questions
-	3. Hollow rectangle pattern
-	4. Half pyramid
-	5. Inverted half pyramid
-	6. Numeric half pyramid
-	7. Numeric inverted half pyramid
-
-home work : 
-	8. *cin and cout inside loop(condtion)
-	9. full pyramid
-	10. Inverted pyramid
-	11. Inverted half pyramid
-	12. Hollo full pyramid
-
-week 2 : 
-	day 1 : 
-		1. Solid Dimond 
-		2. Hollo diamond
-		3. Flipped solid diamond 
-		4. Fancy pattern
-		5. Alphabet palindrome pyramid
-	
-	day 2 : 
-		6. operators, left and right shift
-
-	home work : 
-		7. Factorial 
-		8. Prime 	                 // not completed
 
 week 3 : (arrays)
 	day 1 :
