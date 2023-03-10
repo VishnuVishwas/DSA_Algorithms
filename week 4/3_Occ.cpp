@@ -66,5 +66,5 @@ int main() {
     firstOcc(arr, size = 10, key);
     lastOcc(arr, size = 10, key);
 
-    return 0;
+    return 0;   
 }
