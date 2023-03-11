@@ -1,13 +1,11 @@
 #include<iostream>
 using namespace std;
 
-int reverseNumbers(int n) {
+void reverseNumbers(int n) {
     if (n == 0) {
-        return 1;
+        return;
     }
-
-    cout << n;
-
+    cout << n << " ";
     return reverseNumbers(n-1);
 
 }
