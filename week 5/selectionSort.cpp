@@ -1,70 +1,30 @@
-
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
-int firstOcc(vector<int> names, int key) {
-    int start = 0;
-    int end = names.size() - 1;
+void selectionSort(vector<int> names) {
 
-    int mid = start + (end - start)/2;
-    int ans = -1;
+int n = names.size() ;
 
-    while (start <= end) {
-        if (key == names[mid]) {
-            ans = mid;
-            end = mid - 1;
+    for (int i = 0; i < n-1; i++) {
+        int minIndex = i;
+        for (int j = i+1; j < n; j++)  {
+            if (names[minIndex] > names[j]) {
+                minIndex = j;
+            }
         }
-
-        else if (key > names[mid] ){
-            start = mid + 1;
-        }
-        
-        else if (key < names[mid]) {            
-            end = mid - 1;
-        }
-
-        mid = start + (end - start)/2;
+        swap (names[minIndex], names[i]);
     }
-    return ans;
-}
 
-int lastOcc(vector<int> names, int key) {
-    int start = 0;
-    int end = names.size() - 1;
-
-    int mid = start + (end - start)/2;
-    int ans = -1;
-
-    while (start <= end) {
-        if (key == names[mid]) {
-            ans = mid;
-            start = mid + 1;
-        }
-
-        else if (key > names[mid] ){
-            start = mid + 1;
-        }
-        
-        else if (key < names[mid]) {            
-            end = mid - 1;
-        }
-
-        mid = start + (end - start)/2;
+    //after sort
+    for (int i = 0; i < n; i++) {
+        cout << names[i];
     }
-    return ans;
 }
 
 int main() {
-    vector<int> names{1, 4, 6, 7, 7, 7, 7, 8, 9};
-    int key;
+    vector<int> names{5, 4, 3, 2, 1};
 
-    cout << "Enter the key : ";
-    cin >> key;
-
-    int firstIndex = firstOcc (names, key);
-    cout << "\nThe first occurence of element is " << firstIndex;
-
-    int lastIndex = lastOcc (names, key);
-    cout << "\nThe last occurence of element is " << lastIndex;
+    selectionSort (names);
 }
