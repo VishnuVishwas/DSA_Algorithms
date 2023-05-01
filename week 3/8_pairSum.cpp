@@ -1,3 +1,5 @@
+// Print all the pairs whoes sum = 9
+
 #include <iostream>
 #include <vector>
 using namespace std;
