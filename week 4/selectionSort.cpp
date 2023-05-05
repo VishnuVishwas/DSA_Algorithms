@@ -1,4 +1,5 @@
 // selection sort
+//                                                          minimum element ko uski jagah par rakhna
 
 #include <iostream>
 #include <vector>
