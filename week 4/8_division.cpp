@@ -36,6 +36,18 @@ int main() {
     int divisor = 7;
 
     int quotient = findQuoitent(dividend, divisor);
-
-    cout << "Quoient is : " << quotient << endl;
+    cout << "Quotient is : " << quotient << endl;
+    
+    double finalAns = quotient;
+    double step = 0.1;
+    
+    for(int i=0; i<3; i++) {
+        for(double j=finalAns; j*divisor <= dividend; j += step) {
+            finalAns = j;
+        } 
+        step = step/10;
+    }
+    
+    cout << "Precise ans is : " << finalAns << endl;
+        
 }
