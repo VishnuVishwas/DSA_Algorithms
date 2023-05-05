@@ -12,16 +12,16 @@ int oddOcc (vector<int> arr) {
 
     while(start <= end ) {
         if (start == end) {
-            return start;
+            return start;                    // only one element present in array
         }
 
         // if mid is present in odd index
-        if (mid%2 == 0 ) {
-            if (arr[mid] == arr[mid+1] ) {    // element present at right side
+        if (mid%2 == 0 ) {                    // if mid present at even index
+            if (arr[mid] == arr[mid+1] ) {    // mid present at left side of odd element ( answer ) 
                 start = mid + 2;
             }
             else {
-                end = mid;                    // element may be present or left side
+                end = mid;                    // mid present at right side of the odd element
             }
         }
 
