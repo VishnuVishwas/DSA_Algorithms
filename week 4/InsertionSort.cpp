@@ -1,41 +1,49 @@
-// insetion sort
-// incomplete
+#insertion sort 
+                                    # It contains 4steps 
+                                    # 1. Store the value 
+                                    # 2. Compare with previous elements
+                                    # 3. Shift the values
+                                    # 4. copy the stored value
 
-#include <iostream>
-#include <vector>
+
+#include<iostream>
+#include<vector>
 using namespace std;
 
-int insertionSort (int names[], int size) {
-    for (int i = 1; i < size; i++) {
-        int value = names[i];
-        int j = i-1;
+void insertionSort(vector<int> vrr) {
+    for (int i=1; i<vrr.size(); i++) {
 
-        while (j>=0 && names[j]> value ) {
-            names[j+1] = names[j];
-            j--;
+# 1. Store the value 
+        int value = vrr[i];
+        int j=i-1;
+        for (; j>=0; j--) {
+            
+# 2. Compare with previous elements
+            if(vrr[j] > value) {
+# 3. Shift the values
+                vrr[j+1] = vrr[j];
+            }
+            else {
+                break;
+            }
         }
-        names[j+1] = value;
+ # 4. copy the stored value
+        vrr[j+1] = value;
     }
 
-    // after sorting
-    cout << "After sorting : ";
-    for (int i = 0; i < size; i++) {
-        cout << names[i] <<" ";
+    cout << endl;
+    cout << "Array before sort : ";
+    for(int i=0; i<vrr.size(); i++) {
+        cout << vrr[i] << " ";
     }
 }
- 
+
 int main() {
-    int names[100] = {8, 1, 6, 5 ,3};
+    vector<int> vrr {8, 1, 6, 5 ,3  };
 
-    // cout << "Enter the elements : ";
-    // for(int i = 0; i < sizeof(names);  i++) {
-    //     cin >> names[i];
-    // }
-
-    cout << "Before sorting : ";
-    for (int i = 0; i < sizeof(names); i++) {
-        cout << names[i] << " ";
+    cout << "Array before sort : ";
+    for (int i=0; i<vrr.size(); i++) {
+        cout << vrr[i] << " ";
     }
-
-    insertionSort (names, sizeof(names) );
+    insertionSort(vrr);
 }
