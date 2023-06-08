@@ -1,3 +1,5 @@
+//changing every element of an array into 1
+
 #include <iostream>
 using namespace std;
 
