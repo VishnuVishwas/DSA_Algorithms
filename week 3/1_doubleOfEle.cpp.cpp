@@ -1,3 +1,5 @@
+// Printing double of element in an array
+
 #include <iostream>
 using namespace std;
 
