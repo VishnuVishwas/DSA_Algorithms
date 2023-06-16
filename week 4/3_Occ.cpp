@@ -1,3 +1,5 @@
+// First Occurenece of element and last Occurenece of element using Binary Search
+
 #include <iostream>
 using namespace std;
 
