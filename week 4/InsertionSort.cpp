@@ -1,5 +1,5 @@
 #insertion sort 
-                                    # It contains 4steps 
+                    # It contains 4steps 
                                     # 1. Store the value 
                                     # 2. Compare with previous elements
                                     # 3. Shift the values
