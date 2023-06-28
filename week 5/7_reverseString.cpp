@@ -1,3 +1,5 @@
+// Reversing the char elements
+
 #include <iostream>
 #include <string.h>
 using namespace std;
