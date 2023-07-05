@@ -1,6 +1,9 @@
+// String of hour and min is given return the minimun time difference in min 
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <limits.h>
 using namespace std;
 
 int findMinDifference(vector<string>& timePoints) {
@@ -43,6 +46,6 @@ int findMinDifference(vector<string>& timePoints) {
 int main() {
     vector<char> timePoints{"23:59","00:00"};
 
-    int min = findMinDifference(&timepoints);
+    int min = findMinDifference(timePoints);
 
 }
