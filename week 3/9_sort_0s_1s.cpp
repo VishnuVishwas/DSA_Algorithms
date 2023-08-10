@@ -5,7 +5,7 @@ int sortNum (int arr[], int size) {
     int start = 0;
     int end = size - 1;
 
-    cout << "\napproch 1" << endl;
+    cout << "\napproch 1" << endl;              // not correct
     while (start < end) {
         if (arr[start] == 0) {
             start = start + 1;
