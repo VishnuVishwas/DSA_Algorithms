@@ -43,6 +43,7 @@ void sortNum2 (int arr[], int size) {
         if (arr[i] == 1 ) {
             swap(arr[i], arr[e]);
             e--;
+            i++;
         }
 
     cout << "Elements after sorting : " << endl;
