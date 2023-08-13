@@ -5,6 +5,12 @@
         "string": "cpp",
         "istream": "cpp",
         "vector": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "bitset": "cpp",
+        "complex": "cpp",
+        "streambuf": "cpp",
+        "regex": "cpp",
+        "tuple": "cpp",
+        "valarray": "cpp"
     }
 }
