@@ -1,4 +1,5 @@
 // coin change problem -> minimum cost to reach target
+// Minium no.of elements required to reach target sum
 
 #include<iostream>
 #include<vector>
