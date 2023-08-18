@@ -7,20 +7,20 @@ using namespace std;
 
 void addStrings(string& num1, int i, string& num2, int j, string& ans, int carry) {
 
-    if(i<0 && j<0) {
-        if(carry != 0) {
+    if(i<0 && j<0) {                                  // If all numbers are added
+        if(carry != 0) {                            
             ans.push_back(carry + '0');
         }
         return;
     }
 
-    int n1 = (i >= 0 ? (num1[i]) : '0') - '0';
-    int n2 = (j >= 0 ? (num2[j]) : '0') - '0';
+    int n1 = (i >= 0 ? (num1[i]) : '0') - '0';       // a digit less than num2 : 0 
+    int n2 = (j >= 0 ? (num2[j]) : '0') - '0';       // a digit less than num1 : 0 
     
     int totalSum = n1 + n2 + carry;
 
-    int digit = totalSum%10;
-    carry = totalSum/10;
+    int digit = totalSum%10;                         // number that needed to be inserted in ans 
+    carry = totalSum/10;                             // carry 
     ans.push_back(digit + '0');
 
     addStrings(num1, i-1, num2, j-1, ans, carry);
