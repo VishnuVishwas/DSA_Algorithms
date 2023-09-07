@@ -31,6 +31,6 @@ class Animal {
 };
 
 int main() {
-    animal a;       // for default constructor
+    animal a;                           // for default constructor
     Animal* obj = new Animal(100);      // parameterised constructor
 }
