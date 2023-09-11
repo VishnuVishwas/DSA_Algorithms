@@ -1,6 +1,2 @@
-class Dog : public Animal {
-// public: 
-//     void speak() {
-//         cout << "Dog can bark";
-//     }
-// };
+    // int b=5;
+    // obj
