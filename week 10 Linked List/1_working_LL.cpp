@@ -22,6 +22,7 @@ public:
     }
 };
 
+// Printing the values of nodes
 void print(Node* head) {
     Node* temp = head;
 
