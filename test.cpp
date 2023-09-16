@@ -1,18 +1,35 @@
 #include<iostream>
 using namespace std;
 
-int fact(int n, int i, int ans) {
-    if(i == n+1)
-        return ans;
+void sortArr(int arr[]) {
+    int i=0, s=0, e=7;
+    while(s<=e) {
+        if(arr[i] == 0) {
+            swap(arr[i], arr[s]);
+                i++;
+                s++;
+            }
 
-    ans = ans * i;
+        if(arr[i] == 1) {
+            swap(arr[i], arr[e]);
+                e--;
+                i++;
+        
+    }
 
-    fact(n, i+1, ans);
+    cout << "\nAfter sorting" << endl;
+    for(int i=0; i<7; i++) {
+        cout << arr[i] << " ";
+    }
+    }
 }
 
 int main() {
-    int n=5;
+    int arr[] = {1, 0, 0, 1, 1, 1, 0};
 
-    int ans=1;
-    cout << "Answer is: " << fact(n, 1, ans);
+    cout << "Before Sorting" << endl;
+    for(int i=0; i<7; i++) {
+        cout << arr[i] << " ";
+    }
+    sortArr(arr);
 }
