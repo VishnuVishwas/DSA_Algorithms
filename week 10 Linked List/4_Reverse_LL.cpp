@@ -112,6 +112,18 @@ Node* reverseLoop(Node* head) {
     return left;
 }
 
+Node* reverseRecursion(Node* curr, Node* left) {
+    if(curr == NULL) 
+        return left;
+
+    Node* right = curr->next;
+    curr->next = left;
+    left = curr;
+    curr = right;
+
+    reverseRecursion(curr, left);
+}
+
 int main() {
     Node* head = NULL;
     Node* tail = NULL;
@@ -125,6 +137,13 @@ int main() {
 
 cout << endl;
     Node* reverseKahead = reverseLoop(head);
-    cout << "After reversal : ";
+    cout << "After reversal Loop wala : ";
     print(reverseKahead);
+
+cout << endl;
+    Node* curr = reverseKahead;
+    Node* left = NULL;
+    head = reverseRecursion(curr, left);
+    cout << "After reversal Recursion wala : ";
+    print(head);
 }
