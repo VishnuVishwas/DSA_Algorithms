@@ -8,12 +8,18 @@ public:
     int data;
     Node* next;
 
+    Node() {
+        this->data = 0;
+        this->next = NULL;
+    }
+
     Node(int data) {
         this->data = data;
         this->next = NULL;
     }
-};
 
+    
+};
 
 int getLen(Node* head) {
     Node* temp = head;
@@ -131,11 +137,19 @@ int main() {
     Node* tail = NULL;
 
     cout << "Inserting at head : ";
-    insertAtHead(head, tail, 5);
-    insertAtHead(head, tail, 15);
-    insertAtHead(head, tail, 52);
-    insertAtHead(head, tail, 25);
-    print(head);
+    Node* first = new Node(45);
+    Node* second = new Node(33);
+    Node* third = new Node(11);
+    Node* fourth = new Node(11);
+    Node* fifth = new Node(11);
+
+    first->next = second;
+    second->next = third;
+    third->next = fourth;
+    fourth->next = fifth;
+
+    fifth->next = third;
+    print(first);
 
 cout << endl;
     if (checkLoop(head) ) {
