@@ -5,21 +5,18 @@
 using namespace std;
 
 int main() {
-    stack<int> s;
+    stack<char> s;
 
     // create string
     string str = "vishnu";
 
-int top=-1;
     for(int i=0; i<str.length(); i++) {
         s.push(str[i]);
-        top++;
     }
 
 cout << "Reversed string is : " << endl;
-    for(int i=0; i<str.length(); i++) {
-        cout << str[top] << " ";
+    while( !s.empty() ) {
+        cout << s.top();
         s.pop();
-        top--;
     }
 }
