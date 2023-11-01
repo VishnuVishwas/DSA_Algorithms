@@ -11,7 +11,7 @@ using namespace std;
 vector<int> nextSmallerElement (vector<int>& v) {
     stack<int> s;
     s.push(-1);
-    vector<int> ans(s.size());
+    vector<int> ans(v.size());
     
     for(int i=v.size()-1; i>=0; i--) {
 
