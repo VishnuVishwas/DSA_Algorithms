@@ -43,12 +43,11 @@ void LevelByLevel(Node* root) {
     while(!q.empty()) {
         Node* temp = q.front();
         q.pop();
-
-        // I need to add NULL after every level
+        
         if(temp == NULL) {
             cout << endl;         // so that i can come next line
-            if(!q.empty())
-                q.push(NULL);
+            if(!q.empty())        // I need to add NULL after every level
+                q.push(NULL); 
         }
 
         else{                  // normal push left and right node to queue
