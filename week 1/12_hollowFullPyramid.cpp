@@ -1,20 +1,36 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main() {
-    int n;
+    int row=4, col=4;
 
-    cout << "Enter the value of n : ";
-    cin >> n;
-
-    for (int i = 0; i < n; i++) {
-
-        // first spaces
-        for (int j = 0; j < n-i; j++) {
+    for(int i=0; i<row; i++) {
+    // printing spaces
+    int j=0;
+        while(j<row-i-1) {
             cout << " ";
+            j++;
+        }
+    // printing 1st half
+    j=0;
+        while(j<i+1) {
+            if(j==0 || i==row-1) {
+                 cout << "*";
+            }
+            else   
+                cout << " "; 
+            j++;
+        }
+    j=0;
+        while(j<i) {
+            if(j==i-1 || i==row-1) {
+                 cout << "*";
+            }
+            else   
+                cout << " "; 
+            j++;
         }
 
-        // printing stars
-        for (int j = 0; j < )
+        cout << endl;
     }
 }
