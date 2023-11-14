@@ -1,34 +1,43 @@
 #include<iostream>
-#include<limits.h>
-#include<vector>
 using namespace std;
 
-int main() {
+void moveNegative(int arr[], int size) {
+    int i=0;
+    int l=0;
+    int h = size-1;
 
-    // int row, col;
-    // cin >> row >> col;
-    // vector<vector<int>> vrr (row, vector<int> (col, -8));
-
-    int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-
-
-    int mini = INT_MAX;
-    for(int i=0; i<3; i++) {
-        for(int j=0; j<3; j++) {
-            if(arr[i][j] < mini) {
-                mini = arr[i][j];
-            }
-        }  
+    while(l<h) {
+        if(arr[i] < 0) {
+            swap(arr[i], arr[l]);
+            i++;
+            l++;
+        }
+        else{
+            swap(arr[i], arr[h]);
+            h--;
+        }
     }
+}
 
-    cout << "Maximum number is : " << mini << endl;
+int printDuplicate(int arr[], int size) {
+    
+    for(int i=0; i<size; i++) {
+        int index = abs(arr[i]);
+        if(arr[index] < 0) 
+            return index;
 
+        arr[index] = arr[index] * -1;
+    }
+}
 
-    // cout << "Elements of 2d array are : " << endl;
-    // for(int i=0; i<5; i++) {
-    //     for(int j=0; j<5; j++) {
-    //         cout << vrr[i][j] << " ";
-    //     }
-    //     cout << endl;   
+int main() {
+    int arr[] = {1, 3, 1, 4, 2};
+    int size = sizeof(arr)/sizeof(int);
+
+    cout << "The duplicate number is :  " << printDuplicate(arr, size) << endl;
+
+    // moveNegative(arr, size);
+    // for(int i=0; i<size; i++) {
+    //     cout << arr[i] << " ";
     // }
 }
