@@ -1,3 +1,3 @@
-void sortArr(int& arr[]) {
-
-// }
+        // for(int j=0; j<i; j++) {
+        //     cout << "* ";
+        // }
