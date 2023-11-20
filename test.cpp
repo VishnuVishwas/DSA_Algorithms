@@ -1,43 +1,22 @@
-#include<iostream>
+#include <iostream>
+#include <unordered_map>
+
 using namespace std;
 
-void moveNegative(int arr[], int size) {
-    int i=0;
-    int l=0;
-    int h = size-1;
-
-    while(l<h) {
-        if(arr[i] < 0) {
-            swap(arr[i], arr[l]);
-            i++;
-            l++;
-        }
-        else{
-            swap(arr[i], arr[h]);
-            h--;
-        }
-    }
-}
-
-int printDuplicate(int arr[], int size) {
-    
-    for(int i=0; i<size; i++) {
-        int index = abs(arr[i]);
-        if(arr[index] < 0) 
-            return index;
-
-        arr[index] = arr[index] * -1;
-    }
-}
-
 int main() {
-    int arr[] = {1, 3, 1, 4, 2};
-    int size = sizeof(arr)/sizeof(int);
+  // Create a hash table
+  unordered_map<string, int> hash_table;
 
-    cout << "The duplicate number is :  " << printDuplicate(arr, size) << endl;
+  // Insert some key-value pairs into the hash table
+  hash_table["one"] = 1;
+  hash_table["two"] = 2;
+  hash_table["three"] = 3;
 
-    // moveNegative(arr, size);
-    // for(int i=0; i<size; i++) {
-    //     cout << arr[i] << " ";
-    // }
+  // Look up a value in the hash table
+  int value = hash_table["two"];
+
+  // Print the value
+  cout << value << endl;
+
+  return 0;
 }
